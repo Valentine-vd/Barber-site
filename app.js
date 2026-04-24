@@ -5,3 +5,12 @@ menu.addEventListener('click', function(){
     menu.classList.toggle('is-active');
     menuLinks.classList.toggle('active')
 })
+
+const navLinks = document.querySelectorAll('.navbar__links');
+
+navLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    menu.classList.remove('is-active');
+    menuLinks.classList.remove('active');
+  });
+});
